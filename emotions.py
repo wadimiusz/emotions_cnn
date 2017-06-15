@@ -97,7 +97,7 @@ network = lasagne.layers.DenseLayer(lasagne.layers.dropout(network, p=.5), num_u
 #дальше переделать, т. к. это остатки старого перцептрона
 # Create a loss expression for training, i.e., a scalar objective we want
 # to minimize (for our multi-class problem, it is the cross-entropy loss):
-num_epochs = 10
+num_epochs = 100
 prediction = lasagne.layers.get_output(network)
 loss = lasagne.objectives.categorical_crossentropy(prediction, target_var)
 loss = loss.mean()
